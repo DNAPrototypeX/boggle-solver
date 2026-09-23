@@ -55,7 +55,7 @@ def find_moves(tree, current_node):
 # from the root to node.
 def get_node_word(tree, node):
     path = list(tree.rsearch(node.identifier))
-    path_names = [game[tree[nid].tag] for nid in path]
+    path_names = [game[tree[nid].tag][::-1] for nid in path]
     suffix = "".join(path_names)
     return suffix
 
